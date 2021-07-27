@@ -1,0 +1,32 @@
+{
+    "name": "alexsoft/slim-app-with-symfony-dependency-injection",
+    "type": "project",
+    "require": {
+        "php": "8.0.*",
+        "slim/slim": "^4.8",
+        "nyholm/psr7": "^1.4",
+        "nyholm/psr7-server": "^1.0"
+    },
+    "require-dev": {
+        "roave/security-advisories": "dev-latest"
+    },
+    "replace": {
+        "symfony/polyfill-php72": "*",
+        "symfony/polyfill-php73": "*",
+        "symfony/polyfill-php74": "*",
+        "symfony/polyfill-php80": "*"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Alexsoft\\SlimAppWithSymfonyDependencyInjection\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Alex Plekhanov",
+            "email": "alex@plekhanov.dev"
+        }
+    ],
+    "minimum-stability": "stable"
+}
