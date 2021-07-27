@@ -6,9 +6,9 @@ use Alexsoft\SlimAppWithSymfonyDependencyInjection\Infrastructure\IndexAction;
 use Slim\Factory\AppFactory;
 use Slim\Handlers\Strategies\RequestResponseArgs;
 
-require __DIR__ . '/../vendor/autoload.php';
+require __DIR__.'/../vendor/autoload.php';
 
-$container = require __DIR__ . '/../config/container.php';
+$container = require __DIR__.'/../config/container.php';
 
 AppFactory::setContainer($container);
 
