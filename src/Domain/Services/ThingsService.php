@@ -10,7 +10,7 @@ use Alexsoft\SlimAppWithSymfonyDependencyInjection\Domain\Entities\Thing;
 class ThingsService
 {
     public function __construct(
-        private ThingsRepository $thingsRepository
+        private ThingsRepository $thingsRepository,
     ) {
     }
 
