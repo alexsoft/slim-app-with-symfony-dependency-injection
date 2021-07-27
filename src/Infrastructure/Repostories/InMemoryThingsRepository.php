@@ -17,11 +17,11 @@ class InMemoryThingsRepository implements ThingsRepository
     {
         $this->items = array_combine(
             array_map(
-                static fn(array $thing): int => $thing['id'],
+                static fn (array $thing): int => $thing['id'],
                 $items
             ),
             array_map(
-                static fn(array $thing): Thing => new Thing($thing['id'], $thing['name']),
+                static fn (array $thing): Thing => new Thing($thing['id'], $thing['name']),
                 $items
             )
         );

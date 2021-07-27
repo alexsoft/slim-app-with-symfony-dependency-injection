@@ -34,7 +34,7 @@ class IndexAction
     private function mapThings(array $things): array
     {
         return array_map(
-            static fn(Thing $thing): array => ['id' => $thing->id(), 'name' => $thing->name()],
+            static fn (Thing $thing): array => ['id' => $thing->id(), 'name' => $thing->name()],
             $things
         );
     }
