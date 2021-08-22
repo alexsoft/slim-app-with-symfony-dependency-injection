@@ -10,7 +10,7 @@ use Symfony\Component\DependencyInjection\Loader\PhpFileLoader;
 
 $file = __DIR__ . '/../var/cache/container.php';
 
-$containerConfigCache = new ConfigCache($file, false);
+$containerConfigCache = new ConfigCache($file, true);
 
 if (!$containerConfigCache->isFresh()) {
     $containerBuilder = new ContainerBuilder();

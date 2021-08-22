@@ -2,6 +2,7 @@
 
 declare(strict_types=1);
 
+use Alexsoft\SlimAppWithSymfonyDependencyInjection\ComponentTwo\Infrastructure\Repositories\InMemoryCountriesRepository;
 use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
 
 return static function (ContainerConfigurator $configurator): void {
@@ -12,18 +13,13 @@ return static function (ContainerConfigurator $configurator): void {
         ->autoconfigure()
         ->public();
 
-    $services
-        ->load(
-            'Alexsoft\SlimAppWithSymfonyDependencyInjection\\',
-            '../src/'
-        )
-        ->exclude(
+    $services->set(InMemoryCountriesRepository::class)
+        ->arg(
+            '$countries',
             [
-                '../src/*/Domain/Entities',
-                '../src/*/Domain/Exceptions',
-                '../src/*/services.php',
+                'Ukraine',
+                'Luxembourg',
+                'Netherlands',
             ]
         );
-
-    $configurator->import('../src/*/{services}.php');
 };

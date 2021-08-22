@@ -3,11 +3,11 @@
     "type": "project",
     "require": {
         "php": "8.0.*",
-        "slim/slim": "^4.8",
         "nyholm/psr7": "^1.4",
         "nyholm/psr7-server": "^1.0",
-        "symfony/dependency-injection": "^5.3",
-        "symfony/config": "^5.3"
+        "slim/slim": "^4.8",
+        "symfony/config": "^5.3",
+        "symfony/dependency-injection": "^5.3"
     },
     "require-dev": {
         "roave/security-advisories": "dev-latest"
@@ -30,5 +30,8 @@
             "email": "alex@plekhanov.dev"
         }
     ],
-    "minimum-stability": "stable"
+    "minimum-stability": "stable",
+    "config": {
+        "sort-packages": true
+    }
 }

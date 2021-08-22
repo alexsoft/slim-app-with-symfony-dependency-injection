@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace Alexsoft\SlimAppWithSymfonyDependencyInjection\ComponentOne\Domain\Contracts;
 
-use Alexsoft\SlimAppWithSymfonyDependencyInjection\ComponentOne\Domain\Exceptions\ThingNotFound;
 use Alexsoft\SlimAppWithSymfonyDependencyInjection\ComponentOne\Domain\Entities\Thing;
+use Alexsoft\SlimAppWithSymfonyDependencyInjection\ComponentOne\Domain\Exceptions\ThingNotFound;
 
 interface ThingsRepository
 {
