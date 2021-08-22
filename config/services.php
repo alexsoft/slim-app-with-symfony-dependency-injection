@@ -45,7 +45,4 @@ return static function (ContainerConfigurator $configurator): void {
                 ],
             ]
         );
-
-    $services->set(ThingsService::class)
-        ->arg('$items', [5, 10, 15]);
 };
