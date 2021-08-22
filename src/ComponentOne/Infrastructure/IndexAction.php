@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Alexsoft\SlimAppWithSymfonyDependencyInjection\Infrastructure;
+namespace Alexsoft\SlimAppWithSymfonyDependencyInjection\ComponentOne\Infrastructure;
 
-use Alexsoft\SlimAppWithSymfonyDependencyInjection\Domain\Entities\Thing;
-use Alexsoft\SlimAppWithSymfonyDependencyInjection\Domain\Services\ThingsService;
+use Alexsoft\SlimAppWithSymfonyDependencyInjection\ComponentOne\Domain\Entities\Thing;
+use Alexsoft\SlimAppWithSymfonyDependencyInjection\ComponentOne\Domain\Services\ThingsService;
 use Psr\Http\Message\ResponseInterface as Response;
 use Psr\Http\Message\ServerRequestInterface as Request;
 

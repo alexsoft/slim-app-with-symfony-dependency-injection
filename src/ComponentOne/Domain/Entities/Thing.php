@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Alexsoft\SlimAppWithSymfonyDependencyInjection\Domain\Entities;
+namespace Alexsoft\SlimAppWithSymfonyDependencyInjection\ComponentOne\Domain\Entities;
 
 class Thing
 {

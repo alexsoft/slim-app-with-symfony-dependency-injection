@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Alexsoft\SlimAppWithSymfonyDependencyInjection\Domain\Services;
+namespace Alexsoft\SlimAppWithSymfonyDependencyInjection\ComponentOne\Domain\Services;
 
-use Alexsoft\SlimAppWithSymfonyDependencyInjection\Domain\Contracts\ThingsRepository;
-use Alexsoft\SlimAppWithSymfonyDependencyInjection\Domain\Entities\Thing;
+use Alexsoft\SlimAppWithSymfonyDependencyInjection\ComponentOne\Domain\Contracts\ThingsRepository;
+use Alexsoft\SlimAppWithSymfonyDependencyInjection\ComponentOne\Domain\Entities\Thing;
 
 class ThingsService
 {

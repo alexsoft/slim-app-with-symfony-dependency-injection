@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Alexsoft\SlimAppWithSymfonyDependencyInjection\Domain\Exceptions;
+namespace Alexsoft\SlimAppWithSymfonyDependencyInjection\ComponentOne\Domain\Exceptions;
 
 use Exception;
 

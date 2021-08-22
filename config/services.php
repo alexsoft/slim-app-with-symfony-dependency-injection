@@ -2,9 +2,7 @@
 
 declare(strict_types=1);
 
-use Alexsoft\SlimAppWithSymfonyDependencyInjection\Domain\Entities\Thing;
-use Alexsoft\SlimAppWithSymfonyDependencyInjection\Domain\Services\ThingsService;
-use Alexsoft\SlimAppWithSymfonyDependencyInjection\Infrastructure\Repostories\InMemoryThingsRepository;
+use Alexsoft\SlimAppWithSymfonyDependencyInjection\ComponentOne\Infrastructure\Repostories\InMemoryThingsRepository;
 use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
 
 return static function (ContainerConfigurator $configurator): void {
@@ -22,8 +20,8 @@ return static function (ContainerConfigurator $configurator): void {
         )
         ->exclude(
             [
-                '../src/Domain/Entities',
-                '../src/Domain/Exceptions',
+                '../src/*/Domain/Entities',
+                '../src/*/Domain/Exceptions',
             ]
         );
 

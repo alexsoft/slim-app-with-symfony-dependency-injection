@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-use Alexsoft\SlimAppWithSymfonyDependencyInjection\Infrastructure\IndexAction;
+use Alexsoft\SlimAppWithSymfonyDependencyInjection\ComponentOne\Infrastructure\IndexAction;
 use Slim\Factory\AppFactory;
 use Slim\Handlers\Strategies\RequestResponseArgs;
 

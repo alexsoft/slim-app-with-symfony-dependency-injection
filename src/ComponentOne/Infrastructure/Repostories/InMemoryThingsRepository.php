@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Alexsoft\SlimAppWithSymfonyDependencyInjection\Infrastructure\Repostories;
+namespace Alexsoft\SlimAppWithSymfonyDependencyInjection\ComponentOne\Infrastructure\Repostories;
 
-use Alexsoft\SlimAppWithSymfonyDependencyInjection\Domain\Contracts\ThingsRepository;
-use Alexsoft\SlimAppWithSymfonyDependencyInjection\Domain\Entities\Thing;
-use Alexsoft\SlimAppWithSymfonyDependencyInjection\Domain\Exceptions\ThingNotFound;
+use Alexsoft\SlimAppWithSymfonyDependencyInjection\ComponentOne\Domain\Contracts\ThingsRepository;
+use Alexsoft\SlimAppWithSymfonyDependencyInjection\ComponentOne\Domain\Entities\Thing;
+use Alexsoft\SlimAppWithSymfonyDependencyInjection\ComponentOne\Domain\Exceptions\ThingNotFound;
 
 class InMemoryThingsRepository implements ThingsRepository
 {
