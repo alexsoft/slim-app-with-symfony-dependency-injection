@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 use Alexsoft\SlimAppWithSymfonyDependencyInjection\ComponentOne\Infrastructure\IndexAction;
 use Alexsoft\SlimAppWithSymfonyDependencyInjection\ComponentTwo\Infrastructure\IndexAction as TwoIndexAction;
+use Alexsoft\SlimAppWithSymfonyDependencyInjection\HandlerComponent\Infrastructure\ShowAction;
 use Slim\Factory\AppFactory;
 use Slim\Handlers\Strategies\RequestResponseArgs;
 
@@ -22,11 +23,15 @@ $app->addErrorMiddleware(true, true, true);
 
 $app->get(
     '/',
-    IndexAction::class
+    IndexAction::class,
 );
 $app->get(
     '/component-two',
-    TwoIndexAction::class
+    TwoIndexAction::class,
+);
+$app->get(
+    '/string-modifier',
+    ShowAction::class,
 );
 
 $app->run();

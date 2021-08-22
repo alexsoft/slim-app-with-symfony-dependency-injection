@@ -3,6 +3,8 @@
     "type": "project",
     "require": {
         "php": "8.0.*",
+        "ext-mbstring": "*",
+        "beberlei/assert": "^3.3",
         "nyholm/psr7": "^1.4",
         "nyholm/psr7-server": "^1.0",
         "slim/slim": "^4.8",
