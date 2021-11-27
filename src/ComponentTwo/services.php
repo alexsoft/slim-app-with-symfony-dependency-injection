@@ -13,6 +13,19 @@ return static function (ContainerConfigurator $configurator): void {
         ->autoconfigure()
         ->public();
 
+    $services
+        ->load(
+            'Alexsoft\SlimAppWithSymfonyDependencyInjection\ComponentTwo\\',
+            '../src/ComponentTwo/'
+        )
+        ->exclude(
+            [
+                './Domain/Entities',
+                './Domain/Exceptions',
+                './services.php',
+            ]
+        );
+
     $services->set(InMemoryCountriesRepository::class)
         ->arg(
             '$countries',

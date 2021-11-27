@@ -13,7 +13,7 @@ class StringModifier
     /**
      * @param Modifier[] $modifiers
      */
-    public function __construct(private array $modifiers)
+    public function __construct(private iterable $modifiers)
     {
     }
 

@@ -14,7 +14,6 @@ class ShowAction
     {
     }
 
-
     public function __invoke(Request $request, Response $response): Response
     {
         $query = $request->getQueryParams();

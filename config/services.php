@@ -12,18 +12,5 @@ return static function (ContainerConfigurator $configurator): void {
         ->autoconfigure()
         ->public();
 
-    $services
-        ->load(
-            'Alexsoft\SlimAppWithSymfonyDependencyInjection\\',
-            '../src/'
-        )
-        ->exclude(
-            [
-                '../src/*/Domain/Entities',
-                '../src/*/Domain/Exceptions',
-                '../src/*/services.php',
-            ]
-        );
-
     $configurator->import('../src/*/{services}.php');
 };

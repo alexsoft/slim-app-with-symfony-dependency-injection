@@ -2,13 +2,11 @@
 
 declare(strict_types=1);
 
-use Alexsoft\SlimAppWithSymfonyDependencyInjection\HandlerComponent\Domain\Services\EncloseWithDashesModifier;
+use Alexsoft\SlimAppWithSymfonyDependencyInjection\HandlerComponent\Domain\Contracts\Modifier;
 use Alexsoft\SlimAppWithSymfonyDependencyInjection\HandlerComponent\Domain\Services\StringModifier;
-use Alexsoft\SlimAppWithSymfonyDependencyInjection\HandlerComponent\Domain\Services\UppercaseModifier;
 use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
-use Symfony\Component\DependencyInjection\Reference;
 
-use function Symfony\Component\DependencyInjection\Loader\Configurator\service;
+use function Symfony\Component\DependencyInjection\Loader\Configurator\tagged_iterator;
 
 return static function (ContainerConfigurator $configurator): void {
     $services = $configurator->services();
@@ -18,15 +16,25 @@ return static function (ContainerConfigurator $configurator): void {
         ->autoconfigure()
         ->public();
 
-    $services->alias('modifier.enclose_with_dashes', EncloseWithDashesModifier::class);
-    $services->alias('modifier.uppercase', UppercaseModifier::class);
+    $services->instanceof(Modifier::class)
+        ->tag('handler_component.modifier_implementation');
+
+    $services
+        ->load(
+            'Alexsoft\SlimAppWithSymfonyDependencyInjection\HandlerComponent\\',
+            '../src/HandlerComponent/'
+        )
+        ->exclude(
+            [
+                './Domain/Entities',
+                './Domain/Exceptions',
+                './services.php',
+            ]
+        );
 
     $services->set(StringModifier::class)
         ->arg(
             '$modifiers',
-            [
-                service('modifier.enclose_with_dashes'),
-                new Reference('modifier.uppercase'),
-            ]
+            tagged_iterator('handler_component.modifier_implementation')
         );
 };
