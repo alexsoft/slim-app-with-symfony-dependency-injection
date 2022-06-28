@@ -17,5 +17,5 @@ interface ThingsRepository
     /**
      * @throws ThingNotFound
      */
-    public function getById(): Thing;
+    public function getById(int $id): Thing;
 }
